@@ -1,18 +1,20 @@
-package com.vehical.carspot.dao;
+package com.vehical.dao;
 
 import java.util.List;
-import com.vehical.carspot.model.Product;
-import org.springframework.stereotype.Repository;
-@Repository
+
+import com.vehical.model.Product;
+
+
 public interface ProductDAO {
 	
-	public boolean save(Product product);
-	public boolean update(Product product);
-	public boolean delete(Product product);
-	public Product get(String id);
-	public List<Product> list();
-	
-	
-	
+ public int insertRow(Product product);
+
+ public List getList();
+
+ public Product getRowById(int id);
+
+ public int updateRow(Product product);
+
+ public int deleteRow(int id);
 
 }
